@@ -791,6 +791,41 @@ a.f-line:hover{ color:var(--gold-2); transform:translateX(4px); }
 }
 @media (max-width:640px){
   .container{ padding:0 22px; }
+  header{ height:74px; }
+  header .container{ padding:0 20px; }
+  .brand img{ height:43px; }
+  header.scrolled{ height:64px; }
+  header.scrolled .brand img{ height:36px; }
+  .hero{
+    height:auto; min-height:max(100svh,760px);
+    align-items:flex-start;
+    padding:clamp(126px,18vh,148px) 0 116px;
+  }
+  .hero-inner{ margin:0; }
+  .hero-content{ max-width:100%; }
+  .hero .eyebrow{
+    margin-bottom:18px; font-size:.62rem; letter-spacing:.24em;
+  }
+  .hero h1{
+    font-size:clamp(2.75rem,13.2vw,3.55rem);
+    line-height:.96; margin-bottom:22px;
+  }
+  .hero p.sub{
+    max-width:34rem; margin-bottom:28px;
+    font-size:.96rem; line-height:1.62;
+  }
+  .hero-cta{
+    flex-direction:column; align-items:flex-start;
+    gap:18px;
+  }
+  .hero-cta .btn{ padding:16px 27px; }
+  .watch-link .play{ width:44px; height:44px; }
+  .scroll-cue{
+    left:auto; right:18px; bottom:max(18px,env(safe-area-inset-bottom));
+    transform:none; flex-direction:row; gap:8px;
+    font-size:.52rem; letter-spacing:.22em;
+  }
+  .scroll-cue .mouse{ width:19px; height:31px; }
   .marquee-track span{ font-size:1.25rem; }
   .stats-grid{ grid-template-columns:1fr; gap:32px; }
   .stat + .stat::before{ display:none; }
@@ -814,9 +849,18 @@ a.f-line:hover{ color:var(--gold-2); transform:translateX(4px); }
   .step-card{ padding:23px 20px 25px; border-radius:17px; }
   .step h3{ font-size:1.34rem; }
   .step p{ font-size:.89rem; line-height:1.68; }
-  .hero p.sub{ font-size:1rem; }
 }
-@media (max-height:600px){ .hero{ min-height:auto; } }
+@media (max-width:640px) and (max-height:740px){
+  .hero{ min-height:720px; padding-top:112px; padding-bottom:100px; }
+  .hero .eyebrow{ margin-bottom:14px; }
+  .hero h1{ font-size:clamp(2.48rem,12vw,3rem); margin-bottom:18px; }
+  .hero p.sub{ font-size:.88rem; line-height:1.52; margin-bottom:22px; }
+  .hero-cta{ gap:14px; }
+  .hero-cta .btn{ padding:14px 23px; font-size:.69rem; }
+  .watch-link{ font-size:.68rem; }
+  .watch-link .play{ width:40px; height:40px; }
+}
+@media (min-width:641px) and (max-height:600px){ .hero{ min-height:auto; } }
 @media (prefers-reduced-motion:reduce){
   *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto; }
   .reveal{ opacity:1; transform:none; }
