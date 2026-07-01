@@ -163,23 +163,11 @@ header .container{ display:flex; align-items:center; justify-content:space-betwe
 .brand{ display:flex; align-items:center; gap:14px; height:100%; }
 .brand img{ height:52px; width:auto; transition:height .5s var(--ease), opacity .3s ease; }
 .brand .logo-black{ display:none; }
-.remax-balloon{
-  position:relative; flex:0 0 auto; width:28px; height:36px; display:inline-grid; place-items:center;
-  border-radius:50% 50% 46% 46%; overflow:hidden;
-  background:linear-gradient(180deg,#e5312b 0 38%,#fff 38% 62%,#1c4f9c 62% 100%);
-  box-shadow:0 9px 24px rgba(0,0,0,.18), inset 0 0 0 1px rgba(255,255,255,.45);
-}
-.remax-balloon::before{
-  content:""; position:absolute; inset:6px 7px 12px; border-radius:50%;
-  background:radial-gradient(circle at 35% 24%,rgba(255,255,255,.55),transparent 34%);
-}
-.remax-balloon::after{
-  content:""; position:absolute; left:50%; bottom:-7px; transform:translateX(-50%);
-  width:0; height:0; border-left:5px solid transparent; border-right:5px solid transparent; border-top:8px solid #1c4f9c;
-}
-.remax-balloon span{
-  position:relative; z-index:1; margin-top:1px; font-family:var(--f-cond); font-size:.43rem;
-  letter-spacing:.02em; font-weight:900; color:var(--ink); line-height:1; text-transform:uppercase;
+.brand .remax-logo{
+  height:42px; width:auto; object-fit:contain; flex:0 0 auto;
+  transform:translateY(1px);
+  filter:drop-shadow(0 7px 14px rgba(0,0,0,.18));
+  transition:height .5s var(--ease), filter .35s ease, transform .35s ease;
 }
 nav.main{ display:flex; align-items:center; gap:36px; }
 nav.main a{
@@ -201,7 +189,7 @@ header.scrolled{ background:rgba(246,244,237,.82); backdrop-filter:saturate(1.4)
 header.scrolled .brand .logo-white{ display:none; }
 header.scrolled .brand .logo-black{ display:block; }
 header.scrolled .brand img{ height:40px; }
-header.scrolled .remax-balloon{ width:24px; height:31px; }
+header.scrolled .brand .remax-logo{ height:32px; filter:drop-shadow(0 5px 10px rgba(7,26,68,.14)); }
 header.scrolled nav.main a{ color:var(--text); }
 header.scrolled nav.main a:hover{ color:var(--gold-ink); }
 header.scrolled .header-social{ border-color:var(--line); }
@@ -880,8 +868,10 @@ a.f-line:hover{ color:var(--gold-2); transform:translateX(4px); }
   header{ height:74px; }
   header .container{ padding:0 20px; }
   .brand img{ height:43px; }
+  .brand .remax-logo{ height:34px; transform:translateY(1px); }
   header.scrolled{ height:64px; }
   header.scrolled .brand img{ height:36px; }
+  header.scrolled .brand .remax-logo{ height:29px; }
   .hero{
     height:auto; min-height:max(100svh,760px);
     align-items:flex-start;
@@ -982,7 +972,7 @@ a.f-line:hover{ color:var(--gold-2); transform:translateX(4px); }
 #preloader.done .pl-inner{ opacity:0; transform:translateY(-24px); }
 .pl-brand{ display:flex; align-items:center; gap:18px; margin-bottom:34px; opacity:0; animation:plUp 1s var(--ease-out) .25s forwards; }
 .pl-logo{ height:60px; width:auto; }
-.pl-brand .remax-balloon{ width:34px; height:44px; box-shadow:0 12px 30px rgba(0,0,0,.24), inset 0 0 0 1px rgba(255,255,255,.45); }
+.pl-brand .remax-logo{ height:56px; width:auto; object-fit:contain; transform:translateY(2px); filter:drop-shadow(0 12px 24px rgba(0,0,0,.28)); }
 .pl-tag{ font-size:.7rem; letter-spacing:.36em; text-transform:uppercase; color:var(--gold-2); margin-bottom:42px; opacity:0; animation:plUp 1s var(--ease-out) .42s forwards; }
 .pl-bar{ width:min(300px,64vw); height:2px; background:rgba(255,255,255,.16); border-radius:2px; overflow:hidden; opacity:0; animation:plUp 1s var(--ease-out) .56s forwards; }
 .pl-fill{ display:block; height:100%; width:0; background:linear-gradient(90deg,var(--gold),var(--gold-2)); }
@@ -1002,7 +992,7 @@ html:not(.js) #preloader{ display:none; }
   <div class="pl-inner" role="status" aria-label="Loading Ohana Team">
     <div class="pl-brand" aria-hidden="false">
       <img class="pl-logo" src="assets/new_white%20logo.png?v=20260701" alt="Ohana Team — Roy Ohana Real Estate" />
-      <span class="remax-balloon" aria-label="RE/MAX"><span>RE/MAX</span></span>
+      <img class="remax-logo" src="assets/logopp-Photoroom.png?v=20260701" alt="RE/MAX Israel" />
     </div>
     <div class="pl-bar"><span class="pl-fill" id="plFill"></span></div>
     <div class="pl-count"><span id="plNum">0</span></div>
@@ -1018,7 +1008,7 @@ html:not(.js) #preloader{ display:none; }
     <a href="#home" class="brand" aria-label="Ohana Team home">
       <img class="logo-white" src="assets/new_white%20logo.png?v=20260701" alt="Ohana Team — Roy Ohana Real Estate" />
       <img class="logo-black" src="assets/logo-black.png" alt="Ohana Team — Roy Ohana Real Estate" />
-      <span class="remax-balloon" aria-hidden="true"><span>RE/MAX</span></span>
+      <img class="remax-logo" src="assets/logopp-Photoroom.png?v=20260701" alt="" aria-hidden="true" />
     </a>
     <nav class="main" aria-label="Primary">
       <a href="#home">Home</a>
