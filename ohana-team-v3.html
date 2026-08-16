@@ -1260,6 +1260,11 @@ nav.main a{ font-size:.68rem; letter-spacing:.12em; }
 
 /* Prata has taller letterforms, so multi-line headings need more breathing room. */
 .hero h1{ line-height:1.08; }.section-head h2,.contact-form h2{ line-height:1.17; }.step h3,.property-card--v3 .property-body h3,.contact-info h3,footer h3{ line-height:1.2; }
+
+/* V3.8 — illustrated Netanya service-area map. */
+.map-showcase{ max-width:1100px; margin:0 auto; overflow:hidden; border:1px solid rgba(16,36,62,.13); border-radius:24px; background:#f7f2ec; box-shadow:0 22px 58px rgba(16,36,62,.1),inset 0 1px rgba(255,255,255,.9); }
+.map-showcase img{ display:block; width:100%; height:auto; }
+@media (max-width:640px){ .map-showcase{ border-radius:18px; } }
 </style>
 </head>
 <body>
@@ -1431,7 +1436,9 @@ nav.main a{ font-size:.68rem; letter-spacing:.12em; }
     <div class="section-head reveal">
       <h2>Where We <em>Work</em></h2>
     </div>
-    <div class="map-placeholder reveal d1" role="img" aria-label="Placeholder for a future Netanya area map"></div>
+    <figure class="map-showcase reveal d1">
+      <img src="assets/where-we-work-netanya-map.jpg" alt="Illustrated map of Netanya areas served by Ohana Team: Ir Yamim, Shirat Ha'yam, Nat600, Park Ha'yam, Agamim, Givaat Ha'irosim, and Ramat Poleg" />
+    </figure>
   </div>
 </section>
 
