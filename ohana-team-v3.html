@@ -689,6 +689,8 @@ header.scrolled .burger span{ background:var(--ink); }
 .form-note{ margin-top:18px; padding:15px 18px; border-radius:9px; background:var(--gold-soft); border:1px solid var(--gold-ink); color:var(--ink); font-size:.9rem; display:none; }
 .form-note.is-error{ background:rgba(190,45,45,.1); border-color:rgba(190,45,45,.4); color:#7e1f1f; }
 .form-note.show{ display:block; animation:fadeUp .5s var(--ease) forwards; }
+.form-privacy{ margin:14px 0 0; color:var(--muted); font-size:.75rem; line-height:1.65; }
+.form-privacy a{ color:var(--ink); font-weight:700; text-decoration:underline; text-decoration-color:var(--gold); text-underline-offset:3px; }
 
 .contact-info{ background:var(--ink); color:#fff; border-radius:16px; padding:46px 42px; }
 .contact-info h3{ font-family:var(--f-display); font-size:1.8rem; font-weight:500; margin-bottom:6px; }
@@ -745,10 +747,13 @@ a.f-line:hover{ color:var(--gold-2); transform:translateX(4px); }
 .footer-bottom{ display:grid; grid-template-columns:1.5fr 1fr; gap:40px; align-items:end; padding-top:40px; border-top:1px solid rgba(255,255,255,.14); }
 .f-access{ font-size:.84rem; font-weight:300; line-height:1.8; color:rgba(255,255,255,.58); max-width:580px; }
 .f-access strong{ color:rgba(255,255,255,.85); font-weight:600; }
+.f-access a{ color:var(--gold-2); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
 .f-copy{ text-align:right; font-size:.86rem; font-weight:300; color:rgba(255,255,255,.72); line-height:1.95; }
 .f-copy strong{ font-weight:600; color:#fff; }
 .f-copy a{ color:rgba(255,255,255,.72); transition:color .3s; }
 .f-copy a:hover{ color:var(--gold-2); }
+.footer-legal{ display:flex; flex-wrap:wrap; justify-content:flex-end; gap:5px 15px; margin:9px 0 4px; }
+.footer-legal a{ color:rgba(255,255,255,.82); font-size:.72rem; font-weight:600; letter-spacing:.045em; text-decoration:underline; text-decoration-color:rgba(242,209,123,.5); text-underline-offset:3px; }
 .f-social{ display:flex; gap:14px; margin-top:18px; justify-content:flex-end; }
 .f-social a{ width:42px; height:42px; border-radius:50%; border:1px solid rgba(255,255,255,.25); display:flex; align-items:center; justify-content:center; color:#fff; transition:.4s var(--ease); }
 .f-social a:hover{ background:var(--gold); border-color:var(--gold); color:var(--ink); transform:translateY(-3px); }
@@ -756,7 +761,7 @@ a.f-line:hover{ color:var(--gold-2); transform:translateX(4px); }
 @media (max-width:780px){
   .footer-cols{ grid-template-columns:1fr; gap:38px; }
   .footer-bottom{ grid-template-columns:1fr; gap:26px; }
-  .f-copy{ text-align:left; } .f-social{ justify-content:flex-start; }
+  .f-copy{ text-align:left; } .f-social{ justify-content:flex-start; } .footer-legal{ justify-content:flex-start; }
 }
 
 /* ============================================================
@@ -1602,6 +1607,7 @@ nav.main a{ font-size:.68rem; letter-spacing:.12em; }
             <textarea id="message" name="message" placeholder="How can we help?"></textarea>
           </div>
           <button type="submit" class="btn btn-dark" data-magnetic><span>Send Message</span></button>
+          <p class="form-privacy">By submitting, you agree that Ohana Team may use your details to respond to your enquiry, as described in our <a href="privacy.html">Privacy Policy</a>.</p>
           <div class="form-note" id="formNote" role="status">Thank you — your message has been received. A member of the Ohana Team will be in touch shortly.</div>
         </form>
       </div>
@@ -1684,9 +1690,10 @@ nav.main a{ font-size:.68rem; letter-spacing:.12em; }
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="f-access"><strong>Ohana Team</strong> is committed to providing an accessible website. If you have difficulty accessing any content or notice an accessibility problem, please contact us so we can provide the information you need in the format you require.</div>
+      <div class="f-access"><strong>Ohana Team</strong> is committed to providing an accessible website. If you have difficulty accessing any content or notice an accessibility problem, please contact us so we can provide the information you need in the format you require. <a href="accessibility.html">Read our Accessibility Statement.</a></div>
       <div class="f-copy">
         &copy; 2026 <strong>Ohana Team</strong> — Roy Ohana Real Estate. All rights reserved.<br/>
+        <nav class="footer-legal" aria-label="Legal information"><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a><a href="accessibility.html">Accessibility Statement</a></nav>
         <a href="#home">Back to top &uarr;</a>
         <div class="f-social">
           <a href="https://www.facebook.com/RoyOhanaRealEstate" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 9V7c0-.83.67-1 1.5-1H16V3h-2.5C11 3 10 4.5 10 6.5V9H8v3h2v9h3.5v-9H16l.5-3h-3z"/></svg></a>
