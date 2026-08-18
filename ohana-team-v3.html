@@ -1175,9 +1175,19 @@ nav.main a{ font-size:.68rem; letter-spacing:.12em; }
 .recognition-card--light .recognition-art img{ width:88%; height:88%; object-fit:contain; filter:grayscale(1) contrast(1.15); mix-blend-mode:multiply; }
 .recognition-card--light:nth-child(1) .recognition-art img,.recognition-card--light:nth-child(2) .recognition-art img,.recognition-card--light:nth-child(5) .recognition-art img{ filter:brightness(0) saturate(100%) invert(13%) sepia(22%) saturate(1562%) hue-rotate(169deg) brightness(91%) contrast(92%); mix-blend-mode:normal; }
 
+/* Four selected RE/MAX clubs — a consistent visual stage for every mark. */
+.recognition-grid--clubs{ grid-template-columns:repeat(4,minmax(0,1fr)); }
+.recognition-card--light .recognition-art.club-art{ height:168px; display:grid; place-items:center; overflow:hidden; }
+.recognition-card--light .recognition-art.club-art img{ width:min(100%,198px); height:148px; max-width:100%; object-fit:contain; filter:brightness(0) saturate(100%) invert(13%) sepia(22%) saturate(1562%) hue-rotate(169deg) brightness(91%) contrast(92%); mix-blend-mode:normal; }
+.recognition-card--light .recognition-art.club-art .club-logo--diamond{ transform:scale(1.48); }
+.recognition-card--light .recognition-art.club-art .club-logo--golden{ transform:scale(1.06); }
+.recognition-card--light .recognition-art.club-art .club-logo--chairmans{ transform:scale(.86); }
+.recognition-card--light .recognition-art.club-art .club-logo--hall{ transform:scale(.92); }
+
 @media (max-width:1100px){
   .properties-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
   .recognition-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .recognition-grid--clubs{ grid-template-columns:repeat(2,minmax(0,1fr)); max-width:760px; }
 }
 @media (max-width:640px){
   .founder-quote{ padding-left:17px; margin-top:27px; }
@@ -1185,6 +1195,7 @@ nav.main a{ font-size:.68rem; letter-spacing:.12em; }
   .property-card--v3 .property-body{ padding:20px 20px 23px; }
   .property-media{ aspect-ratio:1.32/1; }
   .recognition-card--light{ min-height:216px; }.recognition-card--light .recognition-art{ height:132px; }
+  .recognition-card--light .recognition-art.club-art{ height:158px; }
 }
 
 /* V3.1 — brighter tone + map placeholder */
@@ -1511,14 +1522,11 @@ nav.main a{ font-size:.68rem; letter-spacing:.12em; }
       <h2>Committed to <em>Excellence</em></h2>
       <p>A track record of industry-leading performance and national recognition, reflecting our relentless dedication to achieving exceptional results for our clients.</p>
     </div>
-    <div class="recognition-grid">
-      <article class="recognition-card recognition-card--light reveal"><div class="recognition-art"><img src="assets/recognition-100.png" alt="RE/MAX 100 Percent Club" /></div></article>
-      <article class="recognition-card recognition-card--light reveal d1"><div class="recognition-art"><img src="assets/recognition-diamond.png" alt="RE/MAX Diamond Club" /></div></article>
-      <article class="recognition-card recognition-card--light reveal d2"><div class="recognition-art"><img src="assets/recognition-platinum.png" alt="RE/MAX Platinum Club" /></div></article>
-      <article class="recognition-card recognition-card--light reveal d3"><div class="recognition-art"><img src="assets/recognition-hall-of-fame.png" alt="RE/MAX Hall of Fame" /></div></article>
-      <article class="recognition-card recognition-card--light reveal"><div class="recognition-art"><img src="assets/recognition-golden-club.png" alt="RE/MAX Golden Club" /></div></article>
-      <article class="recognition-card recognition-card--light reveal d1"><div class="recognition-art"><img src="assets/recognition-madlan-top10.png" alt="Madlan Top 10" /></div></article>
-      <article class="recognition-card recognition-card--light reveal d2"><div class="recognition-art"><img src="assets/recognition-chairmans.png" alt="RE/MAX Chairman's Club" /></div></article>
+    <div class="recognition-grid recognition-grid--clubs">
+      <article class="recognition-card recognition-card--light reveal"><div class="recognition-art club-art"><img class="club-logo--golden" src="assets/recognition-golden-club.png" alt="RE/MAX Golden Club" /></div></article>
+      <article class="recognition-card recognition-card--light reveal d1"><div class="recognition-art club-art"><img class="club-logo--diamond" src="assets/recognition-diamond.png" alt="RE/MAX Diamond Club" /></div></article>
+      <article class="recognition-card recognition-card--light reveal d2"><div class="recognition-art club-art"><img class="club-logo--chairmans" src="assets/recognition-chairmans.png" alt="RE/MAX Chairman's Club" /></div></article>
+      <article class="recognition-card recognition-card--light reveal d3"><div class="recognition-art club-art"><img class="club-logo--hall" src="assets/recognition-hall-of-fame.png" alt="RE/MAX Hall of Fame" /></div></article>
     </div>
   </div>
 </section>
