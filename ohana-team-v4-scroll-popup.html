@@ -1316,7 +1316,7 @@ body.lead-popup-open{ overflow:hidden; }
 @media (prefers-reduced-motion:reduce){ .scroll-lead-modal,.scroll-lead-dialog,.scroll-lead-close{ transition:none; } }
 
 /* V4B polish — premium consultation panel with a consistent interface system. */
-:root{ --f-sans:'Manrope',Arial,sans-serif; --f-display:'Prata',Georgia,serif; --f-cond:'Manrope',Arial,sans-serif; --lead-surface:#fbfdff; --lead-ink:#071a44; --lead-muted:#60718a; --lead-line:rgba(7,26,68,.14); --lead-focus:#1e4fa3; --lead-accent:#b98726; }
+:root{ --f-sans:'Manrope',Arial,sans-serif; --lead-surface:#fbfdff; --lead-ink:#071a44; --lead-muted:#60718a; --lead-line:rgba(7,26,68,.14); --lead-focus:#1e4fa3; --lead-accent:#b98726; }
 .scroll-lead-modal{ background:rgba(3,13,34,.63); }.scroll-lead-dialog{ width:min(100%,930px); padding:clamp(26px,4vw,42px); border-radius:26px; background:linear-gradient(135deg,rgba(252,254,255,.99),rgba(237,245,251,.97)); box-shadow:0 38px 112px rgba(2,11,31,.48),0 2px 0 rgba(255,255,255,.85) inset; }
 .scroll-lead-dialog::after{ content:""; position:absolute; inset:11px; border:1px solid rgba(7,26,68,.055); border-radius:18px; pointer-events:none; }
 .scroll-lead-layout{ display:grid; grid-template-columns:minmax(0,.8fr) minmax(340px,1.2fr); gap:clamp(28px,5vw,68px); align-items:center; }
@@ -1334,6 +1334,7 @@ body.lead-popup-open{ overflow:hidden; }
 .scroll-lead-dialog .btn:hover{ transform:translateY(-2px); border-color:var(--lead-focus); background:var(--lead-focus); color:#fff; box-shadow:0 16px 28px rgba(7,26,68,.27); }.scroll-lead-dialog .form-privacy{ color:#6b7b92; font-family:'Manrope',Arial,sans-serif; font-size:.64rem; }.scroll-lead-dialog .form-privacy a{ color:var(--lead-ink); }.scroll-lead-dialog .form-note{ border-color:rgba(30,79,163,.28); background:rgba(225,237,249,.9); color:var(--lead-ink); font-family:'Manrope',Arial,sans-serif; }
 @media (max-width:760px){ .scroll-lead-layout{ grid-template-columns:1fr; gap:20px; }.scroll-lead-intro{ padding:0; }.scroll-lead-dialog h2,.scroll-lead-copy{ max-width:100%; }.scroll-lead-trust{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }.scroll-lead-trust li{ grid-template-columns:1fr; gap:5px; text-align:center; }.scroll-lead-trust strong{ margin:auto; }.scroll-lead-trust span{ font-size:.47rem; letter-spacing:.045em; } }
 @media (max-width:640px){ .scroll-lead-dialog{ padding:25px 17px 19px; border-radius:21px 21px 15px 15px; }.scroll-lead-layout{ gap:17px; }.scroll-lead-dialog h2{ padding-right:34px; font-size:2rem; }.scroll-lead-copy{ margin:10px 0 15px; }.scroll-lead-dialog .lead-form{ padding:17px 14px 15px; border-radius:14px; }.scroll-lead-dialog .field textarea{ min-height:60px; } }
+@media (max-width:900px){ .scroll-lead-layout{ grid-template-columns:1fr; } .scroll-lead-intro{ padding:0; } .scroll-lead-dialog h2,.scroll-lead-copy{ max-width:100%; } }
 </style>
 </head>
 <body>

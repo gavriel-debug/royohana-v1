@@ -1316,7 +1316,7 @@ nav.main a{ font-size:.68rem; letter-spacing:.12em; }
 }
 
 /* V4A polish — one calm, high-end type and color system. */
-:root{ --f-sans:'Manrope',Arial,sans-serif; --f-display:'Prata',Georgia,serif; --f-cond:'Manrope',Arial,sans-serif; --lead-surface:#fbfdff; --lead-ink:#071a44; --lead-muted:#60718a; --lead-line:rgba(7,26,68,.14); --lead-focus:#1e4fa3; --lead-accent:#b98726; }
+:root{ --f-sans:'Manrope',Arial,sans-serif; --lead-surface:#fbfdff; --lead-ink:#071a44; --lead-muted:#60718a; --lead-line:rgba(7,26,68,.14); --lead-focus:#1e4fa3; --lead-accent:#b98726; }
 .hero--lead .hero-layout{ grid-template-columns:minmax(0,1.16fr) minmax(355px,.7fr); gap:clamp(42px,6vw,100px); }
 .hero--lead .hero-content{ max-width:680px; }
 .hero-lead-card{ padding:31px 30px 25px; border-color:rgba(255,255,255,.82); border-radius:24px; background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(240,246,252,.94)); box-shadow:0 30px 80px rgba(2,11,31,.34),0 2px 0 rgba(255,255,255,.7) inset; }
@@ -1344,6 +1344,11 @@ nav.main a{ font-size:.68rem; letter-spacing:.12em; }
   .hero-lead-card h2{ font-size:1.68rem; }.hero-lead-trust{ margin-bottom:17px; padding:12px 0; }.hero-lead-trust li{ padding:0 6px; }
   .hero-lead-trust strong{ font-size:1rem; }.hero-lead-trust span{ font-size:.45rem; letter-spacing:.055em; }
 }
+
+/* Layout safety — the hero grows with the form instead of clipping it. */
+.hero--lead{ height:auto; min-height:100svh; overflow:visible; align-items:flex-start; }
+.hero--lead .hero-inner{ width:100%; }
+@media (max-width:1120px){ .hero--lead .hero-layout{ grid-template-columns:1fr; } .hero--lead .hero-content{ max-width:720px; } .hero--lead .hero-lead-card{ width:min(100%,620px); justify-self:start; } }
 </style>
 </head>
 <body>
@@ -1433,7 +1438,6 @@ nav.main a{ font-size:.68rem; letter-spacing:.12em; }
         <p class="hero-lead-kicker">Private Consultation</p>
         <h2 id="heroLeadTitle">Let's talk about your <em>next move.</em></h2>
         <p class="hero-lead-copy">Tell us what you are looking for and our Netanya specialists will be in touch.</p>
-        <ul class="hero-lead-trust" aria-label="Ohana Team credentials"><li><strong>15</strong><span>Years local</span></li><li><strong>Top 3</strong><span>RE/MAX Israel</span></li><li><strong>300+</strong><span>Transactions</span></li></ul>
         <form class="lead-form" data-source="Hero consultation form" novalidate>
           <div class="row-2">
             <div class="field"><label for="hero-name">Full Name</label><input type="text" id="hero-name" name="name" placeholder="Your name" required /></div>
