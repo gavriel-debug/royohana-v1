@@ -1314,6 +1314,36 @@ nav.main a{ font-size:.68rem; letter-spacing:.12em; }
   .hero-lead-card .row-2{ grid-template-columns:1fr; gap:0; }
   .hero-lead-card .field textarea{ min-height:58px; }
 }
+
+/* V4A polish — one calm, high-end type and color system. */
+:root{ --f-sans:'Manrope',Arial,sans-serif; --f-display:'Prata',Georgia,serif; --f-cond:'Manrope',Arial,sans-serif; --lead-surface:#fbfdff; --lead-ink:#071a44; --lead-muted:#60718a; --lead-line:rgba(7,26,68,.14); --lead-focus:#1e4fa3; --lead-accent:#b98726; }
+.hero--lead .hero-layout{ grid-template-columns:minmax(0,1.16fr) minmax(355px,.7fr); gap:clamp(42px,6vw,100px); }
+.hero--lead .hero-content{ max-width:680px; }
+.hero-lead-card{ padding:31px 30px 25px; border-color:rgba(255,255,255,.82); border-radius:24px; background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(240,246,252,.94)); box-shadow:0 30px 80px rgba(2,11,31,.34),0 2px 0 rgba(255,255,255,.7) inset; }
+.hero-lead-card::after{ content:""; position:absolute; inset:10px; border:1px solid rgba(7,26,68,.065); border-radius:17px; pointer-events:none; }
+.hero-lead-card > *{ z-index:2; }
+.hero-lead-kicker{ margin-bottom:9px; color:var(--lead-accent); font-family:'Manrope',Arial,sans-serif; font-size:.59rem; letter-spacing:.22em; }
+.hero-lead-card h2{ max-width:14ch; margin-bottom:10px; color:var(--lead-ink); font-family:'Prata',Georgia,serif; font-size:clamp(1.65rem,2.25vw,2.05rem); letter-spacing:-.025em; }
+.hero-lead-copy{ max-width:38ch; margin-bottom:19px; color:var(--lead-muted); font-family:'Manrope',Arial,sans-serif; font-size:.78rem; }
+.hero-lead-trust{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; margin:0 0 20px; padding:13px 0; border-top:1px solid var(--lead-line); border-bottom:1px solid var(--lead-line); list-style:none; }
+.hero-lead-trust li{ min-width:0; padding:0 10px; text-align:center; border-right:1px solid var(--lead-line); }
+.hero-lead-trust li:first-child{ padding-left:0; }.hero-lead-trust li:last-child{ padding-right:0; border-right:0; }
+.hero-lead-trust strong{ display:block; color:var(--lead-ink); font-family:'Prata',Georgia,serif; font-size:1.12rem; font-weight:400; line-height:1.1; }
+.hero-lead-trust span{ display:block; margin-top:4px; color:var(--lead-muted); font-family:'Manrope',Arial,sans-serif; font-size:.5rem; font-weight:700; letter-spacing:.08em; line-height:1.35; text-transform:uppercase; }
+.hero-lead-card .field{ margin-bottom:11px; }.hero-lead-card .field label{ color:#52637c; font-family:'Manrope',Arial,sans-serif; font-size:.55rem; font-weight:700; letter-spacing:.15em; }
+.hero-lead-card .field input,.hero-lead-card .field select,.hero-lead-card .field textarea{ border-color:var(--lead-line); background:rgba(255,255,255,.9); color:var(--lead-ink); font-family:'Manrope',Arial,sans-serif; font-size:.78rem; box-shadow:0 1px 0 rgba(7,26,68,.025); }
+.hero-lead-card .field input::placeholder,.hero-lead-card .field textarea::placeholder{ color:#8a9aaf; }
+.hero-lead-card .field input:focus,.hero-lead-card .field select:focus,.hero-lead-card .field textarea:focus{ border-color:var(--lead-focus); box-shadow:0 0 0 4px rgba(30,79,163,.12); }
+.hero-lead-card .btn{ margin-top:2px; border-color:var(--lead-ink); background:var(--lead-ink); box-shadow:0 10px 23px rgba(7,26,68,.2); transition:transform .28s var(--ease),box-shadow .28s var(--ease),background .28s var(--ease); }
+.hero-lead-card .btn:hover{ transform:translateY(-2px); box-shadow:0 16px 28px rgba(7,26,68,.28); background:var(--lead-focus); color:#fff; border-color:var(--lead-focus); }
+.hero-lead-card .form-privacy{ color:#6b7b92; font-family:'Manrope',Arial,sans-serif; }.hero-lead-card .form-privacy a{ color:var(--lead-ink); }
+.hero-lead-card .form-note{ border-color:rgba(30,79,163,.28); background:rgba(225,237,249,.9); color:var(--lead-ink); font-family:'Manrope',Arial,sans-serif; }
+@media (max-width:900px){ .hero--lead .hero-layout{ grid-template-columns:1fr; gap:30px; }.hero-lead-card{ width:min(100%,620px); } }
+@media (max-width:640px){
+  .hero--lead .hero-inner{ padding-top:calc(var(--header-h) + 34px); }.hero-lead-card{ padding:24px 18px 20px; border-radius:20px; }
+  .hero-lead-card h2{ font-size:1.68rem; }.hero-lead-trust{ margin-bottom:17px; padding:12px 0; }.hero-lead-trust li{ padding:0 6px; }
+  .hero-lead-trust strong{ font-size:1rem; }.hero-lead-trust span{ font-size:.45rem; letter-spacing:.055em; }
+}
 </style>
 </head>
 <body>
@@ -1403,6 +1433,7 @@ nav.main a{ font-size:.68rem; letter-spacing:.12em; }
         <p class="hero-lead-kicker">Private Consultation</p>
         <h2 id="heroLeadTitle">Let's talk about your <em>next move.</em></h2>
         <p class="hero-lead-copy">Tell us what you are looking for and our Netanya specialists will be in touch.</p>
+        <ul class="hero-lead-trust" aria-label="Ohana Team credentials"><li><strong>15</strong><span>Years local</span></li><li><strong>Top 3</strong><span>RE/MAX Israel</span></li><li><strong>300+</strong><span>Transactions</span></li></ul>
         <form class="lead-form" data-source="Hero consultation form" novalidate>
           <div class="row-2">
             <div class="field"><label for="hero-name">Full Name</label><input type="text" id="hero-name" name="name" placeholder="Your name" required /></div>

@@ -1314,6 +1314,26 @@ body.lead-popup-open{ overflow:hidden; }
   .scroll-lead-dialog .btn{ width:100%; }
 }
 @media (prefers-reduced-motion:reduce){ .scroll-lead-modal,.scroll-lead-dialog,.scroll-lead-close{ transition:none; } }
+
+/* V4B polish — premium consultation panel with a consistent interface system. */
+:root{ --f-sans:'Manrope',Arial,sans-serif; --f-display:'Prata',Georgia,serif; --f-cond:'Manrope',Arial,sans-serif; --lead-surface:#fbfdff; --lead-ink:#071a44; --lead-muted:#60718a; --lead-line:rgba(7,26,68,.14); --lead-focus:#1e4fa3; --lead-accent:#b98726; }
+.scroll-lead-modal{ background:rgba(3,13,34,.63); }.scroll-lead-dialog{ width:min(100%,930px); padding:clamp(26px,4vw,42px); border-radius:26px; background:linear-gradient(135deg,rgba(252,254,255,.99),rgba(237,245,251,.97)); box-shadow:0 38px 112px rgba(2,11,31,.48),0 2px 0 rgba(255,255,255,.85) inset; }
+.scroll-lead-dialog::after{ content:""; position:absolute; inset:11px; border:1px solid rgba(7,26,68,.055); border-radius:18px; pointer-events:none; }
+.scroll-lead-layout{ display:grid; grid-template-columns:minmax(0,.8fr) minmax(340px,1.2fr); gap:clamp(28px,5vw,68px); align-items:center; }
+.scroll-lead-intro{ padding:10px 0 10px 8px; }.scroll-lead-kicker{ margin-bottom:11px; color:var(--lead-accent); font-family:'Manrope',Arial,sans-serif; font-size:.6rem; font-weight:800; letter-spacing:.22em; }
+.scroll-lead-dialog h2{ max-width:11ch; color:var(--lead-ink); font-family:'Prata',Georgia,serif; font-size:clamp(2rem,3.7vw,3.15rem); letter-spacing:-.035em; }
+.scroll-lead-copy{ max-width:31ch; margin:17px 0 26px; color:var(--lead-muted); font-family:'Manrope',Arial,sans-serif; font-size:.86rem; }
+.scroll-lead-trust{ display:grid; gap:13px; margin:0; padding:0; list-style:none; }.scroll-lead-trust li{ display:grid; grid-template-columns:40px 1fr; gap:11px; align-items:center; }
+.scroll-lead-trust strong{ display:grid; place-items:center; width:40px; height:40px; border:1px solid rgba(30,79,163,.18); border-radius:50%; background:rgba(30,79,163,.06); color:var(--lead-ink); font-family:'Prata',Georgia,serif; font-size:.84rem; font-weight:400; }
+.scroll-lead-trust span{ color:#566880; font-family:'Manrope',Arial,sans-serif; font-size:.66rem; font-weight:700; letter-spacing:.08em; line-height:1.4; text-transform:uppercase; }
+.scroll-lead-dialog .lead-form{ padding:25px; border:1px solid rgba(7,26,68,.1); border-radius:17px; background:rgba(255,255,255,.78); box-shadow:0 16px 38px rgba(7,26,68,.07),0 1px 0 rgba(255,255,255,.92) inset; }
+.scroll-lead-dialog .field{ margin-bottom:12px; }.scroll-lead-dialog .field label{ color:#52637c; font-family:'Manrope',Arial,sans-serif; font-size:.56rem; font-weight:700; letter-spacing:.15em; }
+.scroll-lead-dialog .field input,.scroll-lead-dialog .field select,.scroll-lead-dialog .field textarea{ border-color:var(--lead-line); background:var(--lead-surface); color:var(--lead-ink); font-family:'Manrope',Arial,sans-serif; font-size:.79rem; box-shadow:0 1px 0 rgba(7,26,68,.025); }
+.scroll-lead-dialog .field input::placeholder,.scroll-lead-dialog .field textarea::placeholder{ color:#8a9aaf; }.scroll-lead-dialog .field input:focus,.scroll-lead-dialog .field select:focus,.scroll-lead-dialog .field textarea:focus{ border-color:var(--lead-focus); box-shadow:0 0 0 4px rgba(30,79,163,.12); }
+.scroll-lead-dialog .btn{ width:100%; margin-top:2px; border-color:var(--lead-ink); background:var(--lead-ink); box-shadow:0 10px 23px rgba(7,26,68,.18); transition:transform .28s var(--ease),box-shadow .28s var(--ease),background .28s var(--ease); }
+.scroll-lead-dialog .btn:hover{ transform:translateY(-2px); border-color:var(--lead-focus); background:var(--lead-focus); color:#fff; box-shadow:0 16px 28px rgba(7,26,68,.27); }.scroll-lead-dialog .form-privacy{ color:#6b7b92; font-family:'Manrope',Arial,sans-serif; font-size:.64rem; }.scroll-lead-dialog .form-privacy a{ color:var(--lead-ink); }.scroll-lead-dialog .form-note{ border-color:rgba(30,79,163,.28); background:rgba(225,237,249,.9); color:var(--lead-ink); font-family:'Manrope',Arial,sans-serif; }
+@media (max-width:760px){ .scroll-lead-layout{ grid-template-columns:1fr; gap:20px; }.scroll-lead-intro{ padding:0; }.scroll-lead-dialog h2,.scroll-lead-copy{ max-width:100%; }.scroll-lead-trust{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }.scroll-lead-trust li{ grid-template-columns:1fr; gap:5px; text-align:center; }.scroll-lead-trust strong{ margin:auto; }.scroll-lead-trust span{ font-size:.47rem; letter-spacing:.045em; } }
+@media (max-width:640px){ .scroll-lead-dialog{ padding:25px 17px 19px; border-radius:21px 21px 15px 15px; }.scroll-lead-layout{ gap:17px; }.scroll-lead-dialog h2{ padding-right:34px; font-size:2rem; }.scroll-lead-copy{ margin:10px 0 15px; }.scroll-lead-dialog .lead-form{ padding:17px 14px 15px; border-radius:14px; }.scroll-lead-dialog .field textarea{ min-height:60px; } }
 </style>
 </head>
 <body>
@@ -1750,21 +1770,26 @@ body.lead-popup-open{ overflow:hidden; }
 <div class="scroll-lead-modal" id="scrollLeadPopup" role="dialog" aria-modal="true" aria-labelledby="scrollLeadTitle" aria-hidden="true">
   <div class="scroll-lead-dialog" tabindex="-1">
     <button class="scroll-lead-close" id="scrollLeadClose" type="button" aria-label="Close consultation form"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" /></svg></button>
-    <p class="scroll-lead-kicker">Private Consultation</p>
-    <h2 id="scrollLeadTitle">Your next chapter in <em>Netanya</em> starts here.</h2>
-    <p class="scroll-lead-copy">Whether you are buying, selling, or simply exploring, tell us where you are headed and we will guide the next step.</p>
-    <form class="lead-form" data-source="Scroll popup consultation form" novalidate>
-      <div class="row-2">
-        <div class="field"><label for="popup-name">Full Name</label><input type="text" id="popup-name" name="name" placeholder="Your name" required /></div>
-        <div class="field"><label for="popup-phone">Phone</label><input type="tel" id="popup-phone" name="phone" placeholder="Your phone number" /></div>
+    <div class="scroll-lead-layout">
+      <div class="scroll-lead-intro">
+        <p class="scroll-lead-kicker">Private Consultation</p>
+        <h2 id="scrollLeadTitle">Your next chapter in <em>Netanya</em> starts here.</h2>
+        <p class="scroll-lead-copy">Whether you are buying, selling, or simply exploring, tell us where you are headed and we will guide the next step.</p>
+        <ul class="scroll-lead-trust" aria-label="Ohana Team credentials"><li><strong>15</strong><span>Years of local expertise</span></li><li><strong>3</strong><span>Top 3 RE/MAX Israel</span></li><li><strong>300+</strong><span>Local transactions</span></li></ul>
       </div>
-      <div class="field"><label for="popup-email">Email</label><input type="email" id="popup-email" name="email" placeholder="you@example.com" required /></div>
-      <div class="field"><label for="popup-reason">Reason for Contact</label><select id="popup-reason" name="reason"><option value="" disabled selected>Select an option…</option><option>Interested in Buying</option><option>Interested in Selling</option><option>Consultation &amp; Valuation</option></select></div>
-      <div class="field"><label for="popup-message">Message</label><textarea id="popup-message" name="message" placeholder="How can we help?"></textarea></div>
-      <button type="submit" class="btn btn-dark" data-magnetic><span>Request a Private Consultation</span></button>
-      <p class="form-privacy">By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
-      <div class="form-note" role="status"></div>
-    </form>
+      <form class="lead-form" data-source="Scroll popup consultation form" novalidate>
+        <div class="row-2">
+          <div class="field"><label for="popup-name">Full Name</label><input type="text" id="popup-name" name="name" placeholder="Your name" required /></div>
+          <div class="field"><label for="popup-phone">Phone</label><input type="tel" id="popup-phone" name="phone" placeholder="Your phone number" /></div>
+        </div>
+        <div class="field"><label for="popup-email">Email</label><input type="email" id="popup-email" name="email" placeholder="you@example.com" required /></div>
+        <div class="field"><label for="popup-reason">Reason for Contact</label><select id="popup-reason" name="reason"><option value="" disabled selected>Select an option…</option><option>Interested in Buying</option><option>Interested in Selling</option><option>Consultation &amp; Valuation</option></select></div>
+        <div class="field"><label for="popup-message">Message</label><textarea id="popup-message" name="message" placeholder="How can we help?"></textarea></div>
+        <button type="submit" class="btn btn-dark" data-magnetic><span>Request a Private Consultation</span></button>
+        <p class="form-privacy">By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+        <div class="form-note" role="status"></div>
+      </form>
+    </div>
   </div>
 </div>
 
