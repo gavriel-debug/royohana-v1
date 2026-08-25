@@ -1349,6 +1349,24 @@ nav.main a{ font-size:.68rem; letter-spacing:.12em; }
 .hero--lead{ height:auto; min-height:100svh; overflow:visible; align-items:flex-start; }
 .hero--lead .hero-inner{ width:100%; }
 @media (max-width:1120px){ .hero--lead .hero-layout{ grid-template-columns:1fr; } .hero--lead .hero-content{ max-width:720px; } .hero--lead .hero-lead-card{ width:min(100%,620px); justify-self:start; } }
+
+/* V4A refinement — keep the consultation card calm and secondary to the story. */
+.hero--lead .hero-layout{ grid-template-columns:minmax(0,1.24fr) minmax(320px,.62fr); gap:clamp(32px,5vw,76px); }
+.hero--lead .hero-content{ max-width:700px; padding-bottom:8px; }
+.hero-lead-card{ width:min(100%,390px); padding:24px 23px 20px; border-radius:20px; box-shadow:0 22px 56px rgba(2,11,31,.28),0 2px 0 rgba(255,255,255,.7) inset; }
+.hero-lead-card::after{ inset:9px; border-radius:14px; }
+.hero-lead-kicker{ margin-bottom:7px; font-size:.55rem; }
+.hero-lead-card h2{ margin-bottom:8px; font-size:clamp(1.5rem,2vw,1.78rem); }
+.hero-lead-copy{ margin-bottom:15px; font-size:.73rem; line-height:1.55; }
+.hero-lead-card .field{ margin-bottom:9px; }
+.hero-lead-card .field label{ margin-bottom:4px; font-size:.52rem; }
+.hero-lead-card .field input,.hero-lead-card .field select,.hero-lead-card .field textarea{ padding:10px 11px; font-size:.74rem; }
+.hero-lead-card .field textarea{ min-height:54px; }
+.hero-lead-card .btn{ padding:12px 15px; font-size:.61rem; }
+.hero-lead-card .form-privacy{ margin-top:8px; font-size:.6rem; }
+.hero-lead-card .form-note{ margin-top:9px; padding:8px 10px; font-size:.68rem; }
+@media (max-width:1120px){ .hero--lead .hero-lead-card{ width:min(100%,420px); } }
+@media (max-width:640px){ .hero-lead-card{ width:100%; padding:22px 18px 18px; } }
 </style>
 </head>
 <body>
