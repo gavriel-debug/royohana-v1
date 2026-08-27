@@ -1939,9 +1939,12 @@ nav.main a{ font-size:.68rem; letter-spacing:.12em; }
         processSteps[ti].classList.toggle('reached', timelineProgress >= reachPoint);
       }
     }
-    if (!REDUCE && heroInner && y < vh){
+    if (!REDUCE && heroInner && y < vh && window.innerWidth >= 761){
       heroInner.style.transform = 'translateY(' + (y * 0.18) + 'px)';
       heroInner.style.opacity = Math.max(0, 1 - y / (vh * 0.85));
+    } else if (heroInner) {
+      heroInner.style.transform = '';
+      heroInner.style.opacity = '';
     }
     if (!REDUCE){
       var vhh = window.innerHeight;
