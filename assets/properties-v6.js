@@ -17,8 +17,8 @@ window.OHANA_PROPERTY_GROUPS = [
       {
         title: 'Private Residence',
         location: 'Ramat Poleg · Moshe Sneh St.',
-        image: 'assets/property-moshe-sneh-placeholder.svg',
-        alt: 'Image coming soon for a private residence on Moshe Sneh Street, Ramat Poleg',
+        image: 'assets/property-moshe-sneh.webp',
+        alt: 'Private residence on Moshe Sneh Street in Ramat Poleg',
         specs: ['5 Rooms', '250 m² Lot', '230 m² Built', '3 Levels']
       },
       {
