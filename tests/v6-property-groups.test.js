@@ -22,6 +22,7 @@ assert.ok(data.includes("title: 'APARTMENTS'"), 'Apartments must have a dedicate
 assert.ok(data.includes("location: 'Ramat Poleg · Moshe Sneh St.'"), 'The new Moshe Sneh house must use the supplied location');
 assert.ok(data.includes("image: 'assets/property-moshe-sneh.webp'"), 'The Moshe Sneh listing must use its optimized WebP photo');
 assert.ok(data.includes("specs: ['5 Rooms', '250 m² Lot', '230 m² Built', '3 Levels']"), 'The new Moshe Sneh house must use the supplied details');
+assert.ok(data.includes("specs: ['7 Rooms', '292 m² Lot', '272 m² Built', '4 Levels']"), 'The Sachlav house must use the corrected lot and built-area figures');
 assert.ok(!data.includes('Galey HaYam Residence'), 'Galey HaYam must not appear in the new property data');
 assert.ok(!data.includes('Ehud Manor 7'), 'Building numbers must be removed from property locations');
 assert.ok(!v5.includes('properties-v6.js'), 'The approved V5 page must remain unchanged');

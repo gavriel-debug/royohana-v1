@@ -26,7 +26,7 @@ window.OHANA_PROPERTY_GROUPS = [
         location: 'Ramat Poleg · Sachlav St.',
         image: 'assets/property-06-sachlav.jpg',
         alt: 'Semi-detached residence in Ramat Poleg',
-        specs: ['7 Rooms', '260 m² Lot', '282 m² Built', '4 Levels']
+        specs: ['7 Rooms', '292 m² Lot', '272 m² Built', '4 Levels']
       }
     ]
   },
