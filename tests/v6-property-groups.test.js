@@ -22,6 +22,8 @@ assert.ok(data.includes("title: 'APARTMENTS'"), 'Apartments must have a dedicate
 assert.equal((data.match(/title: 'Private House'/g) || []).length, 3, 'All three private-house cards must use the same Private House title');
 assert.ok(!data.includes("title: 'Private Residence'"), 'Private-house cards must not use the Residence title');
 assert.ok(!data.includes("title: 'Semi-Detached Residence'"), 'Private-house cards must not use the Semi-Detached Residence title');
+assert.ok(data.includes("title: 'Briga Yam'"), 'The Briga Yam apartment title must not include Triplex');
+assert.ok(!data.includes("title: 'Briga Yam Triplex'"), 'The Briga Yam apartment title must not include Triplex');
 assert.ok(data.includes("location: 'Ramat Poleg · Moshe Sneh St.'"), 'The new Moshe Sneh house must use the supplied location');
 assert.ok(data.includes("image: 'assets/property-moshe-sneh.webp'"), 'The Moshe Sneh listing must use its optimized WebP photo');
 assert.ok(data.includes("specs: ['5 Rooms', '250 m² Lot', '230 m² Built', '3 Levels']"), 'The new Moshe Sneh house must use the supplied details');

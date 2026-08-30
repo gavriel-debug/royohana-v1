@@ -41,7 +41,7 @@ window.OHANA_PROPERTY_GROUPS = [
         specs: ['5 Rooms', '180 m²', '30 m² Terrace', '23rd Floor']
       },
       {
-        title: 'Briga Yam Triplex',
+        title: 'Briga Yam',
         location: 'Ir Yamim · Ehud Manor St.',
         image: 'assets/property-02-briga-yam.jpg',
         alt: 'Briga Yam triplex in Ir Yamim',
