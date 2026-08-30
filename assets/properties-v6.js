@@ -8,21 +8,21 @@ window.OHANA_PROPERTY_GROUPS = [
     title: 'PRIVATE HOUSES',
     items: [
       {
-        title: 'Private Residence',
+        title: 'Private House',
         location: 'Ramat Poleg · Dlayot St.',
         image: 'assets/property-03-dlayot.jpg',
         alt: 'Private residence with pool in Ramat Poleg',
         specs: ['11 Rooms', '800 m² Lot', '400 m² Built', '3 Levels']
       },
       {
-        title: 'Private Residence',
+        title: 'Private House',
         location: 'Ramat Poleg · Moshe Sneh St.',
         image: 'assets/property-moshe-sneh.webp',
         alt: 'Private residence on Moshe Sneh Street in Ramat Poleg',
         specs: ['5 Rooms', '250 m² Lot', '230 m² Built', '3 Levels']
       },
       {
-        title: 'Semi-Detached Residence',
+        title: 'Private House',
         location: 'Ramat Poleg · Sachlav St.',
         image: 'assets/property-06-sachlav.jpg',
         alt: 'Semi-detached residence in Ramat Poleg',
