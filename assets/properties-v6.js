@@ -45,7 +45,7 @@ window.OHANA_PROPERTY_GROUPS = [
         location: 'Ir Yamim · Ehud Manor St.',
         image: 'assets/property-02-briga-yam.jpg',
         alt: 'Briga Yam triplex in Ir Yamim',
-        specs: ['Triplex - 5 Rooms', '232 m²', '270 m² Terraces', 'Private Pool']
+        specs: ['Triplex - 6 Rooms', '232 m²', '270 m² Terraces', 'Private Pool']
       },
       {
         title: 'Dimri Spirit',

@@ -13,7 +13,7 @@ const page = fs.readFileSync(pagePath, 'utf8');
 const data = fs.readFileSync(dataPath, 'utf8');
 const v5 = fs.readFileSync(path.join(root, 'ohana-team-v5-floating-ledger.html'), 'utf8');
 
-assert.ok(page.includes('<script src="assets/properties-v6.js?v=20260830-apartment-types"></script>'), 'V6 must load its refreshed versioned property data');
+assert.ok(page.includes('<script src="assets/properties-v6.js?v=20260830-triplex-rooms"></script>'), 'V6 must load its refreshed versioned property data');
 assert.ok(page.includes('class="property-group"'), 'Listings must be rendered in labeled property groups');
 assert.ok(page.includes('properties-group-grid'), 'Each group must render as its own property row');
 assert.ok(!page.includes('Featured Property'), 'Property image labels must be removed');
@@ -26,7 +26,7 @@ assert.ok(data.includes("title: 'Briga Yam'"), 'The Briga Yam apartment title mu
 assert.ok(!data.includes("title: 'Briga Yam Triplex'"), 'The Briga Yam apartment title must not include Triplex');
 const apartments = data.slice(data.indexOf("title: 'APARTMENTS'"));
 const firstApartment = apartments.indexOf("specs: ['Apartment - 5 Rooms', '180 m²'");
-const triplex = apartments.indexOf("specs: ['Triplex - 5 Rooms', '232 m²'");
+const triplex = apartments.indexOf("specs: ['Triplex - 6 Rooms', '232 m²'");
 const secondApartment = apartments.indexOf("specs: ['Apartment - 5 Rooms', '148 m²'");
 assert.ok(firstApartment >= 0 && triplex > firstApartment && secondApartment > triplex, 'Apartment types must replace the 5 Rooms label in the requested order');
 assert.ok(data.includes("location: 'Ramat Poleg · Moshe Sneh St.'"), 'The new Moshe Sneh house must use the supplied location');
