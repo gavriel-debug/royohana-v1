@@ -13,7 +13,7 @@ const page = fs.readFileSync(pagePath, 'utf8');
 const data = fs.readFileSync(dataPath, 'utf8');
 const v5 = fs.readFileSync(path.join(root, 'ohana-team-v5-floating-ledger.html'), 'utf8');
 
-assert.ok(page.includes('<script src="assets/properties-v6.js"></script>'), 'V6 must load its own property data');
+assert.ok(page.includes('<script src="assets/properties-v6.js?v=20260830-briga-yam"></script>'), 'V6 must load its own versioned property data');
 assert.ok(page.includes('class="property-group"'), 'Listings must be rendered in labeled property groups');
 assert.ok(page.includes('properties-group-grid'), 'Each group must render as its own property row');
 assert.ok(!page.includes('Featured Property'), 'Property image labels must be removed');
