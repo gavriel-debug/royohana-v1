@@ -38,21 +38,21 @@ window.OHANA_PROPERTY_GROUPS = [
         location: 'Ir Yamim · Ehud Manor St.',
         image: 'assets/property-01-briga-towers.jpg',
         alt: 'Briga Towers residence in Ir Yamim',
-        specs: ['5 Rooms', '180 m²', '30 m² Terrace', '23rd Floor']
+        specs: ['Apartment - 5 Rooms', '180 m²', '30 m² Terrace', '23rd Floor']
       },
       {
         title: 'Briga Yam',
         location: 'Ir Yamim · Ehud Manor St.',
         image: 'assets/property-02-briga-yam.jpg',
         alt: 'Briga Yam triplex in Ir Yamim',
-        specs: ['5 Rooms', '232 m²', '270 m² Terraces', 'Private Pool']
+        specs: ['Triplex - 5 Rooms', '232 m²', '270 m² Terraces', 'Private Pool']
       },
       {
         title: 'Dimri Spirit',
         location: 'Ir Yamim · Natan Yonatan St.',
         image: 'assets/property-05-dimri-spirit.jpg',
         alt: 'Dimri Spirit residence in Ir Yamim',
-        specs: ['5 Rooms', '148 m²', '25 m² Terrace', '13th Floor']
+        specs: ['Apartment - 5 Rooms', '148 m²', '25 m² Terrace', '13th Floor']
       }
     ]
   }
